@@ -33,4 +33,30 @@ public class BoardServiceImpl implements BoardService {
 		return dao.view(bno);
 	}
 
+	@Override
+	public void modify(BoardVO vo) throws Exception {
+		dao.modify(vo);
+		
+	}
+
+	@Override
+	public void delete(int bno) throws Exception {
+		dao.delete(bno);
+	}
+	
+	//게시물 총 개수
+	@Override
+	public int count() throws Exception {
+		// TODO Auto-generated method stub
+		return dao.count();
+	}
+
+	@Override
+	public List<BoardVO> listPage(int displayPost, int postNum) throws Exception {
+		// TODO Auto-generated method stub
+		return dao.listPage(displayPost, postNum);
+	}
+	
+	
+	
 }
