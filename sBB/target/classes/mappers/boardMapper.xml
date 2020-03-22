@@ -15,4 +15,11 @@
  	select bno, title, content, writer, regDate, viewCnt 
  	from tbl_board
  </select>
+ 
+ <!--   게시물 조회 -->
+ <select id="view" parameterType="int" resultType="com.board.domain.BoardVO">
+ 	select bno, title, content, writer, regDate, viewCnt
+ 	from tbl_board 
+ 	where bno = #{bno} <!-- 정수형 게시물 번호를 보내고 게시물의 데이터형인 vo를 내보낸다 -->
+ </select>
 </mapper>
